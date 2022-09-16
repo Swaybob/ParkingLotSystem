@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 26, 65);
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    color: aquamarine;
+    z-index: 999;
+}
+
+nav h1 {
+    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    padding: 0.5rem 2rem;
+}
+
+main {
+    width: 700px;
+    display: grid;
+    grid-template-areas:
+        "in in"
+        "ss ms";
+    /* "ss  ms"; */
+    gap: 2rem;
+    margin-top: 4.5rem;
+    height: 80%;
+}
+
+#intro {
+    grid-area: in;
+    font-size: 1.5rem;
+    color: aquamarine;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.small-size {
+    display: grid;
+    grid-area: ss;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2rem;
+}
+
+.multi-size {
+    display: grid;
+    /* grid-template-rows: 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px; */
+    grid-template-columns: 40% 45%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-area: ms;
+    gap: 2rem;
+}
+
+.multi-size-lot,
+.small-lot {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px grey;
+    position: relative;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.small-lot {
+    background-color: purple;
+}
+
+.multi-size-lot {
+    background-color: brown;
+}
+
+div>button {
+    width: 80%;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: rgb(26, 26, 65);
+    position: absolute;
+    bottom: 10%;
+    height: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.renew-btn {
+    display: none;
+}
