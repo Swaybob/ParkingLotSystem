@@ -1,2 +1,2 @@
 # ParkingLotSystem
-The Programm is bult using vanilla Js and pure HTML and CSss without any framework or library.
+The Program is built using vanilla Js and pure HTML and CSS without any framework or library.
