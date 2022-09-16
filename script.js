@@ -12,7 +12,7 @@ for (let smallLot of smallLots) {
                 smallLot.parentElement.style.backgroundColor = "purple";
                 smallLot.textContent = "I'm free, book me";
                 smallLot.previousElementSibling.style.display = 'block';
-            }, 2000)
+            }, 5400000)
     }
 }
 
@@ -20,7 +20,7 @@ for (let multiLot of multiLots) {
     multiLot.addEventListener('click', lotSelected)
 
     function lotSelected() {
-        multiLot.parentElement.style.backgroundColor = "red"
+        multiLot.parentElement.style.backgroundColor = "blue"
 
         multiLot.innerHTML = '<h1>Booked</h1>'
         setTimeout(
