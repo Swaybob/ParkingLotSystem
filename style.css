@@ -107,5 +107,22 @@ div>button {
 }
 
 .renew-btn {
+    width: 80%;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: rgb(26, 26, 65);
+    position: absolute;
+    top: 5%;
+    height: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+}
+
+hide-renew-btn {
     display: none;
 }
