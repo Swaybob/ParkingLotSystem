@@ -11,18 +11,17 @@ body {
     justify-content: center;
     background-color: rgb(26, 26, 65);
     height: 100vh;
+    width: 100vw;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    position: fixed;
     top: 0;
     height: 4rem;
     width: 100%;
     color: aquamarine;
-    z-index: 999;
 }
 
 nav h1 {
@@ -33,7 +32,7 @@ nav h1 {
 }
 
 main {
-    width: 700px;
+    width: 100%;
     display: grid;
     grid-template-areas:
         "in in"
@@ -72,8 +71,8 @@ main {
 
 .multi-size-lot,
 .small-lot {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border-radius: 5px;
     box-shadow: 3px 3px 5px grey;
     position: relative;
@@ -106,7 +105,7 @@ div>button {
     cursor: pointer;
 }
 
-.renew-btn {
+.exit-btn {
     width: 80%;
     border-radius: 3px;
     border: 1px solid white;
@@ -123,6 +122,18 @@ div>button {
     display: none;
 }
 
-hide-renew-btn {
+hide-exit-btn {
     display: none;
+}
+
+@media (max-width:600px) {
+
+    main,
+    .small-size,
+    .multi-size {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
 }

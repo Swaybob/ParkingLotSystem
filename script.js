@@ -1,6 +1,6 @@
 let smallLots = document.getElementsByClassName('small-lot-btn')
 let multiLots = document.getElementsByClassName('multi-lot-btn')
-let exitBtn = document.getElementsByClassName('renew-btn')
+let exitBtn = document.getElementsByClassName('exit-btn')
 
 
 
@@ -15,7 +15,7 @@ for (let smallLot of smallLots) {
             smallLot.textContent = `Fee: ${fee}`
         }, 60000)
         console.log(smallLot.previousElementSibling.classList)
-        smallLot.previousElementSibling.classList.toggle('hide-renew-btn')
+        smallLot.previousElementSibling.classList.toggle('hide-exit-btn')
         smallLot.parentElement.style.backgroundColor = "white"
         smallLot.parentElement.style.backgroundImage = 'url("./asset/car.jpg")';
         smallLot.parentElement.style.backgroundPosition = 'center';
@@ -27,10 +27,12 @@ for (let smallLot of smallLots) {
             alert('This slot has been booked')
         })
 
-        exitBtn.addEventListener('click', function displayFee() {
-            smallLot.textContent = `Total Fee: ${fee} Time up`;
+        exitBtn.forEach(exitBtns => {
+            exitBtns.addEventListener('click', function displayFee() {
+                smallLot.textContent = `Total Fee: ${fee} Time up`;
 
-        })
+            })
+        });
     }
 }
 for (let multiLot of multiLots) {
@@ -39,11 +41,11 @@ for (let multiLot of multiLots) {
     function lotSelected() {
         let fee = 0;
         setInterval(() => {
-            fee += 2.00;
+            fee += 3.00;
             multiLot.textContent = `Fee: ${fee}`
         }, 60000)
         console.log(multiLot.previousElementSibling.classList)
-        multiLot.previousElementSibling.classList.toggle('hide-renew-btn')
+        multiLot.previousElementSibling.classList.toggle('hide-exit-btn')
         multiLot.parentElement.style.backgroundColor = "white"
         multiLot.parentElement.style.backgroundImage = 'url("./asset/truck.jpg")';
         multiLot.parentElement.style.backgroundPosition = 'center';
@@ -55,9 +57,11 @@ for (let multiLot of multiLots) {
             alert('This slot has been booked')
         })
 
-        exitBtn.addEventListener('click', function displayFee() {
-            multiLot.textContent = `Total Fee: ${fee} Time up`;
+        exitBtn.forEach(exitBtns => {
+            exitBtns.addEventListener('click', function displayFee() {
+                multiLot.textContent = `Total Fee: ${fee} Time up`;
 
-        })
+            })
+        });
     }
 }
