@@ -28,7 +28,7 @@ for (let smallLot of smallLots) {
         })
 
         exitBtn.addEventListener('click', function displayFee() {
-            smallLot.textContent = `Total Fee: ${lotFee.fee} Time up`;
+            smallLot.textContent = `Total Fee: ${fee} Time up`;
 
         })
     }
@@ -42,37 +42,22 @@ for (let multiLot of multiLots) {
             fee += 2.00;
             multiLot.textContent = `Fee: ${fee}`
         }, 60000)
+        console.log(multiLot.previousElementSibling.classList)
+        multiLot.previousElementSibling.classList.toggle('hide-renew-btn')
         multiLot.parentElement.style.backgroundColor = "white"
         multiLot.parentElement.style.backgroundImage = 'url("./asset/truck.jpg")';
         multiLot.parentElement.style.backgroundPosition = 'center';
         multiLot.parentElement.style.backgroundRepeat = 'no-repeat';
         multiLot.parentElement.style.backgroundSize = 'cover';
         multiLot.innerHTML = '<h1>Booked</h1>'
-        multiLot.textContent = fee
-
-
-        // () => {
-        //     multiLot.parentElement.style.backgroundColor = "purple";
-        //     multiLot.style.classList.toggle('hide-renew-btn')
-        //     multiLot.textContent = "I'm free, book me";
-        //     multiLot.previousElementSibling.classList.toggle('hide-renew-btn')
-        //     // multiLot.previousElementSibling.classList.remove('hide-renew-btn');
-        //     lotFee['fee'] = 100.00;
-        // }, 25000)
         multiLot.removeEventListener('click', lotSelected)
         multiLot.addEventListener('click', () => {
             alert('This slot has been booked')
         })
 
         exitBtn.addEventListener('click', function displayFee() {
-            multiLot.textContent = `Total Fee: ${lotFee.fee} Time up`;
+            multiLot.textContent = `Total Fee: ${fee} Time up`;
 
         })
-
-
     }
-
-    multiLot.removeEventListener('click', lotSelected)
-    // multiLot.removeEventListener('click', displayFee)
 }
-
