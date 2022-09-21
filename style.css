@@ -128,6 +128,10 @@ tr {
 
 }
 
+a {
+    text-decoration: none;
+}
+
 td,
 th {
     width: 33.3%;
