@@ -14,10 +14,12 @@ body {
     width: 100vw;
 }
 
-header {
+header,
+nav {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
     top: 0;
     height: 4rem;
     width: 100%;
@@ -31,16 +33,22 @@ nav h1 {
     padding: 0.5rem 2rem;
 }
 
+#store-btn {
+    padding: 1rem 2rem;
+    width: fit-content;
+}
+
 main {
     width: 100%;
     display: grid;
     grid-template-areas:
         "in in"
         "ss ms";
-    /* "ss  ms"; */
+
     gap: 2rem;
     margin-top: 4.5rem;
     height: 80%;
+    padding: 1rem;
 }
 
 #intro {
@@ -57,16 +65,16 @@ main {
     grid-template-rows: 20% 20% 20% 20%;
     grid-template-columns: 30% 30% 30%;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .multi-size {
     display: grid;
-    /* grid-template-rows: 50px 50px 50px 50px;
-    grid-template-columns: 50px 50px; */
     grid-template-columns: 40% 45%;
     grid-template-rows: 20% 20% 20% 20%;
     grid-area: ms;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .multi-size-lot,
@@ -79,6 +87,7 @@ main {
     display: flex;
     place-content: center;
     align-items: center;
+    color: aquamarine;
 }
 
 .small-lot {
@@ -88,6 +97,7 @@ main {
 .multi-size-lot {
     background-color: brown;
 }
+
 
 div>button {
     width: 80%;
@@ -105,25 +115,26 @@ div>button {
     cursor: pointer;
 }
 
-.exit-btn {
+#table {
     width: 80%;
-    border-radius: 3px;
-    border: 1px solid white;
-    color: rgb(26, 26, 65);
-    position: absolute;
-    top: 5%;
-    height: 30%;
-    left: 0;
-    right: 0;
+    border: 1px solid aquamarine;
+    align-self: center;
     margin: auto;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    display: none;
 }
 
-hide-exit-btn {
-    display: none;
+tr {
+    width: 100%;
+    height: 2rem;
+
+}
+
+td,
+th {
+    width: 33.3%;
+    height: 2rem;
+    color: aquamarine;
+    border: 0.5px solid aquamarine;
+    text-align: center;
 }
 
 @media (max-width:600px) {
@@ -135,5 +146,9 @@ hide-exit-btn {
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
+    }
+
+    nav h1 {
+        font-size: 24px;
     }
 }
